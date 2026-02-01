@@ -105,26 +105,26 @@ def test_design_rules():
     
     # Test width checking
     valid, msg = dr.check_width(0.5)
-    assert valid == True
+    assert valid
     print(f"✓ Width check (0.5µm): {valid}")
     
     valid, msg = dr.check_width(0.3)
-    assert valid == False
+    assert not valid
     print(f"✓ Width check (0.3µm): {valid} (expected)")
     
     # Test spacing checking
     valid, msg = dr.check_spacing(0.25)
-    assert valid == True
+    assert valid
     print(f"✓ Spacing check (0.25µm): {valid}")
     
     # Test bend radius
     valid, msg = dr.check_bend_radius(7.0)
-    assert valid == True
+    assert valid
     print(f"✓ Bend radius check (7.0µm): {valid}")
     
     # Test convenience functions
-    assert check_minimum_width(0.5) == True
-    assert check_minimum_spacing(0.3) == True
+    assert check_minimum_width(0.5)
+    assert check_minimum_spacing(0.3)
     print(f"✓ Convenience functions work")
     
     # Test adding custom rule
