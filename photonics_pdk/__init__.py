@@ -20,10 +20,13 @@ from .technology import (
     Technology,
     Layer,
     MaterialProperty,
+    get_soi_220nm_technology,
+    get_silicon_nitride_technology,
 )
 
 from .design_rules import (
     DesignRules,
+    DesignRule,
     check_minimum_width,
     check_minimum_spacing,
 )
@@ -47,8 +50,11 @@ __all__ = [
     "Technology",
     "Layer",
     "MaterialProperty",
+    "get_soi_220nm_technology",
+    "get_silicon_nitride_technology",
     # Design rules
     "DesignRules",
+    "DesignRule",
     "check_minimum_width",
     "check_minimum_spacing",
     # Utilities
